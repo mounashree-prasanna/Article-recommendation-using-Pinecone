@@ -1,0 +1,20 @@
+[2025-04-16T18:02:05.645+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-16T18:02:05.671+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Medium_to_Pinecone.download_data manual__2025-04-16T18:01:45.067787+00:00 [queued]>
+[2025-04-16T18:02:05.683+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Medium_to_Pinecone.download_data manual__2025-04-16T18:01:45.067787+00:00 [queued]>
+[2025-04-16T18:02:05.684+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2025-04-16T18:02:05.704+0000] {taskinstance.py:2888} INFO - Executing <Task(_PythonDecoratedOperator): download_data> on 2025-04-16 18:01:45.067787+00:00
+[2025-04-16T18:02:05.767+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'Medium_to_Pinecone', 'download_data', 'manual__2025-04-16T18:01:45.067787+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/HW8_Pinecone.py', '--cfg-path', '/tmp/tmpjrt__opt']
+[2025-04-16T18:02:05.773+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=359) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2025-04-16T18:02:05.774+0000] {standard_task_runner.py:105} INFO - Job 4: Subtask download_data
+[2025-04-16T18:02:05.775+0000] {standard_task_runner.py:72} INFO - Started process 383 to run task
+[2025-04-16T18:02:06.120+0000] {task_command.py:467} INFO - Running <TaskInstance: Medium_to_Pinecone.download_data manual__2025-04-16T18:01:45.067787+00:00 [running]> on host 5ae9f2aa9b17
+[2025-04-16T18:02:06.593+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Medium_to_Pinecone' AIRFLOW_CTX_TASK_ID='download_data' AIRFLOW_CTX_EXECUTION_DATE='2025-04-16T18:01:45.067787+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-04-16T18:01:45.067787+00:00'
+[2025-04-16T18:02:06.622+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-16T18:02:21.553+0000] {logging_mixin.py:190} INFO - Downloaded file has 2499 lines
+[2025-04-16T18:02:21.556+0000] {python.py:240} INFO - Done. Returned value was: /tmp/medium_data/medium_data.csv
+[2025-04-16T18:02:23.802+0000] {job.py:229} INFO - Heartbeat recovered after 18.30 seconds
+[2025-04-16T18:02:26.027+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-16T18:02:26.030+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=Medium_to_Pinecone, task_id=download_data, run_id=manual__2025-04-16T18:01:45.067787+00:00, execution_date=20250416T180145, start_date=20250416T180205, end_date=20250416T180226
+[2025-04-16T18:02:26.126+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-16T18:02:26.176+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-04-16T18:02:26.179+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
